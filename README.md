@@ -40,16 +40,14 @@ env = gym.make("LunarLander-v2")
 state = env.reset()
 done = False
 
-epochs = 1000  # Количество шагов, которые агент будет делать
+epochs = 1000 
 total_reward = 0
 
 for _ in range(epochs):
-    action = env.action_space.sample()  # Случайное действие
-    next_state, reward, done, info = env.step(action)  # Переход в новое состояние
+    action = env.action_space.sample()  
+    next_state, reward, done, info = env.step(action)  
     total_reward += reward
-    # Визуализация среды
     env.render()
-    # Если игра закончена, сбрасываем среду
     if done:
         print(f"Game Over! Total Reward: {total_reward}")
         state = env.reset()
