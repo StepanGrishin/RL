@@ -67,5 +67,9 @@ pip install gym[box2d]
 
 pip install pyvirtualdisplay
 
+https://drive.google.com/file/d/1TZ9oOc28xtwUMfy9vRbcZ3sPBgwG5L2J/view?usp=drive_link
+
+https://drive.google.com/file/d/1s_LOjVvCP1_5cyYMqvKGNmHBmgKTfYrd/view?usp=drive_link
+
 # **4. Заключение**
 Данная задача является интересной и прикладной задачей обучения с подкреплением. Данный алгоритм является прототипом к реальной задаче посадки летательного аппарата на землю. Был отработан и написан тестовый скрипт для данной задачи и в дальнейшем будут использованы различные методы обучения агента для достижения поставленных целей
