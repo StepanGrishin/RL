@@ -30,16 +30,20 @@
 3. Оптимальное поведение определяется суммой баллов, полученных в результате определенной линии повдения
 
     import gym
+   
     import numpy as np
+   
     import matplotlib.pyplot as plt
 
     from pyvirtualdisplay import Display
+   
     import gym
 
     env = gym.make("LunarLander-v2")
 
 
     state = env.reset()
+   
     done = False
 
     epochs = 1000 
