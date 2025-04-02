@@ -34,20 +34,15 @@ import matplotlib.pyplot as plt
 from pyvirtualdisplay import Display
 import gym
 
-# Запуск виртуального дисплея
-
-# Создание среды
 env = gym.make("LunarLander-v2")
 
-# Инициализация переменных
+
 state = env.reset()
 done = False
 
-# Параметры
 epochs = 1000  # Количество шагов, которые агент будет делать
 total_reward = 0
 
-# Запуск симуляции
 for _ in range(epochs):
     action = env.action_space.sample()  # Случайное действие
     next_state, reward, done, info = env.step(action)  # Переход в новое состояние
