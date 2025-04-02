@@ -60,6 +60,7 @@
 
 # **3. Настройка среды**
 pip install gym[box2d]
+
 pip install pyvirtualdisplay
 
 # **4. Заключение**
