@@ -27,30 +27,31 @@
 2. Если аппарат разбился или улетел за зону посадки или сел вне зоны посадки - штраф. Посадка с высокой вертикальной скоростью- штраф, посадка на рельеф не под тем углом - штраф(?)
 3. Оптимальное поведение определяется суммой баллов, полученных в результате определенной линии повдения
 
-import gym
-import numpy as np
-import matplotlib.pyplot as plt
+    import gym
+    import numpy as np
+    import matplotlib.pyplot as plt
 
-from pyvirtualdisplay import Display
-import gym
+    from pyvirtualdisplay import Display
+    import gym
 
-env = gym.make("LunarLander-v2")
+    env = gym.make("LunarLander-v2")
 
 
-state = env.reset()
-done = False
+    state = env.reset()
+    done = False
 
-epochs = 1000 
-total_reward = 0
+    epochs = 1000 
+    total_reward = 0
 
-for _ in range(epochs):
-    action = env.action_space.sample()  
-    next_state, reward, done, info = env.step(action)  
-    total_reward += reward
-    env.render()
+    for _ in range(epochs):
+        action = env.action_space.sample()  
+        next_state, reward, done, info = env.step(action)  
+        total_reward += reward
+        env.render()
+    
     if done:
         print(f"Game Over! Total Reward: {total_reward}")
         state = env.reset()
         total_reward = 0
 
-env.close()
+    env.close()
